@@ -1,0 +1,32 @@
+name: portfolio
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  flutter: 
+    sdk: flutter
+  font_awesome_flutter: ^10.6.0
+  url_launcher: ^6.2.3
+  intl: ^0.17.0
+  cached_network_image_web:
+    git: 
+      url: https://github.com/AdiIsHappy/flutter_cached_network_image.git
+      path: cached_network_image_web
+      ref: develop
+  transparent_image: ^2.0.1
+  provider: ^6.1.1
+  scrollable_positioned_list: ^0.3.8
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
