@@ -16,6 +16,7 @@ class RightColumnView extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             scrollOffsetController: rcvController.scrollOffsetController,
             itemScrollController: rcvController.itemScrollController,
+            itemPositionsListener: rcvController.itemPositionsListener,
             itemCount: rcvController.widgets.length,
             itemBuilder: (context, idx) => rcvController.widgets[idx],
             separatorBuilder: (_, __) =>

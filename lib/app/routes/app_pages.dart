@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/left_column/bindings/left_column_binding.dart';
 import '../modules/left_column/views/left_column_view.dart';
 
 part 'app_routes.dart';
@@ -23,7 +22,6 @@ class AppPages {
     GetPage(
       name: _Paths.LEFT_COLUMN,
       page: () => LeftColumnView(),
-      binding: LeftColumnBinding(),
     ),
   ];
 }

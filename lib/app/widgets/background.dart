@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/app/utils/constants/colors.dart';
 
 class Background extends StatefulWidget {
-  const Background({super.key});
+  const Background({super.key, this.child});
+  final Widget? child;
 
   @override
   _BackgroundState createState() => _BackgroundState();
@@ -25,6 +26,7 @@ class _BackgroundState extends State<Background> {
             stops: const [0.1, 1.0]),
       ),
       child: MouseRegion(
+        child: widget.child,
         onHover: (event) {
           setState(() {
             // Update the cursor position based on the mouse event

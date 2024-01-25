@@ -13,18 +13,15 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
-        const Background(),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: TSizes.large),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: [LeftColumnView(), const RightColumnView()]),
-        ),
-      ],
+        body: Background(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: TSizes.large),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [LeftColumnView(), const RightColumnView()]),
+      ),
     ));
   }
 }

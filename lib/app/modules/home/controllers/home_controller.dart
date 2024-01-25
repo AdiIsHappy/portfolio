@@ -38,12 +38,16 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     itemPositionsListener.itemPositions.addListener(() {
       final pos = itemPositionsListener.itemPositions.value.first.index;
-      print(pos);
       selectedSectionIndex.value = pos;
     });
     super.onInit();
+  }
+
+  void scrollTo(int index) {
+    selectedSectionIndex.value = index;
+    itemScrollController.scrollTo(
+        index: index, duration: 400.milliseconds, curve: Curves.easeInQuad);
   }
 }

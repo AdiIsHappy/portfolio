@@ -70,8 +70,7 @@ class LeftColumnView extends StatelessWidget {
                                   tag: element.value,
                                   text: element.value,
                                   onPressed: () {
-                                    controller.selectedSectionIndex.value =
-                                        element.key;
+                                    controller.scrollTo(element.key);
                                   },
                                   isSelected: element.key ==
                                       controller.selectedSectionIndex.value,
